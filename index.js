@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+
+app.use(express.static(__dirname + '/www'));
+
 app.get('/', function (req, response) {
   response.sendFile(path.join(__dirname + '/index.html'));
 });
